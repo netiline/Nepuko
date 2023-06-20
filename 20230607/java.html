@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        //" ", ' ' 는 문자열을 뜻한다. 문자열은 숫자(이미지, 영상 등)가 아니다. 문자이다.
+        /* 여러줄로 쓰려면 이 표시 */
+        /* 암묵적으로 ' '는 고유대명사? 같은 거 사용할 때, 또는
+           변하지 않는 고정적인 문자열을 사용할 때
+           대입연산자는 오른쪽 값을 왼쪽에 저장
+        */
+
+        document.write("안녕 나는 자바스크립트야 반갑지?<br>");
+        document.write('오늘 머 먹었어');
+        document.write("사과 먹었다")
+
+        // varialbe(변수) = var 변수는 바로 위에 쓴 값의 변수만 적용이 된다. 변수 이름은 어떻게 쓰든 상관 없이 순차적이다.
+        var number=10;
+
+        document.write("<b>"+number+"</b><br>");
+
+        var width="40";
+        var height="60";
+
+        document.write(width*height);
+
+        number='aaa';
+
+        //순향이가 사과 10개, 순호가 딸기 5개, 순겸이가 배 15개 있다.
+        //세 사람이 가지고 있는 과일은 총 몇개인지 출력
+        //각 사람마다 변수 지정해서 할 것
+
+        var apple=10;
+        var strawberry=5;
+        var pear=15;
+
+        document.write("<br>"+"<div>과일은 총"+(apple+strawberry+pear)+"개 이다.<div>");
+
+        //밑변 15, 높이 20을 가지는 삼각형의 넓이를 구하여 출력하시오.
+        //출력결과는 -> 밑변: 15 높이: 20
+        //             삼각형의 넓이 : 150
+
+        var tri_width=15
+        var tri_height=20
+
+        document.write(
+            "<br>"+"<div>밑변 ="+(tri_width)+"  높이 ="+(tri_height)+"</div>"+"<br>"
+            +"<div>삼각형의 넓이"+(tri_height*tri_width/2)+"</div>"
+        )
+
+        var tall=180;
+        var my_tall="나의 키는 "+tall;
+
+        document.write(my_tall);
+
+        my_tall = "예림이 키는 "+160;
+        document.write(my_tall);
+
+        var num1=10;
+        var num2=30;
+        //num1+num2, num1-num2, num1*num2, num1/num2(나누기), num1%num2(나누기...나머지값 계산0)
+        document.write("<br>"+num1/num2);
+        document.write("<br>"+num1%num2+"<br><br>");
+
+        // 오늘의 숙제 가 있고!!! 이제 부터 자바스크립트를 하기 때문에
+        // 당문간 숙제는 매일 있을 예정!!!!
+        // 문제는 1개만
+        // 그래서 오늘 과제는 무엇이냐!!
+        // 반지름이 r인 원이 있다. 이 원의 넓이와 둘레를 구하여 출력
+
+        var r=Number(prompt("반지름 입력하시오!"));
+        // prompt함수는 브라우저에서 입력창을 제공하는 기능을 가지고 있다.
+        // prompt로 입력한 내용은 반드시 문자역이여야 한다.
+        // 문자열 -> 숫자 변환 방법 : Number(), parseInt()
+        // Number() : 숫자만 있는 문자열인 경우 변환 가능
+        // parseInt() : 숫자와 문자가 섞여있어도 변환 가능
+        //              문자열 앞쪽에 있는 숫자만 변환시켜준다.
+        // 데이터의 타입을 알고싶은 경우 : typeof()를 사용하면 된다.
+
+        document.write(typeof(r))
+
+        document.write("반지름이 r("+r+")인 원의 둘레는 "+(2*r*Math.PI)+"이다."+"<br>");
+        document.write("반지름이 r("+r+")인 원의 넓이는 "+(Math.PI*r*r)+"이다."+"<br>");
+
+        // 그때그때 브라우저에서 반지름 값을 입력해서 계산값을 출력하는 방법
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

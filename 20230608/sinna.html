@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+    var shape = prompt("도형을 입력하세요 (square, rectangle, circle):");
+    var color = prompt("배경색을 입력하세요 ( 예) red, blue, yellow, pink 등등):");
+    //var width = parseInt(prompt("너비를 입력하세요 (100px 이상):"));
+    //if(width <100)
+    //alert("100px 이상으로 적으라는 문구 안 읽었냐.")
+    //var height = parseInt(prompt("높이를 입력하세요 (100px 이상) , (square과 circle의 경우 높이 생략 가능)"));
+    //if(height < 100)
+    //alert("100px 이상으로 적으라는 문구 안 읽었냐.")
+
+    var width;
+    while (true) {
+        width = parseInt(prompt("너비를 입력하세요 (100px 이상):"));
+        if(width >= 100){
+            break;
+        }
+        alert("100px 이상으로 적으라는 문구 안 읽었냐.");
+    }
+
+    var height;
+    while (true) {
+        height
+        = parseInt(prompt("너비를 입력하세요 (100px 이상):"));
+        if(width >= 100){
+            break;
+        }
+        alert("100px 이상으로 적으라는 문구 안 읽었냐.");
+    }
+
+    if (shape === "square") {
+        document.write("<div style=width:" + width + "px;height:" + width + "px;background:" + color + ";></div>");
+    } 
+    else if (shape === "rectangle") {
+        document.write("<div style=width:" + width + "px;height:" + height + "px;background:" + color + ";></div>");
+    } 
+    else if (shape === "circle") {
+        document.write("<div style=width:" + (width*2) + "px;height:" + (width*2) + "px;border-radius:50%;background:" + color + ";></div>");
+    }
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //Up&Down 게임
+        //유저가 숫자를 집어넣으면 컴퓨터가 알아서 범위를 좁혀가며 맞추는 것
+
+        while(true){
+        var user = parseInt(prompt("유저가 집어넣는 공간(1~50까지의 숫자)"));
+        if (user > 50){
+            alert("51 이상 넣으면 터진다....")
+        } else{
+            break;
+        }
+        }
+        var a=50;
+        var b=1;
+        var c
+        
+        while(true){
+        com = Math.floor(Math.random()*a)+b ;
+        if(user == com){    
+            document.write("너가 넣은 숫자다: "+user+"<br>컴퓨터가 낳은 숫자: "+com+"<br>");
+            break;
+        }else if(user < com){
+            c=com
+            if( com == c){
+                document.write("<u></u>")
+            }
+            document.write("컴퓨터가 낳은 숫자: "+com+"<br>Down!<br>");
+            a=com-1;
+            b=(b = 50-a && b <=50);
+            
+        }else{
+            if( com == c){
+                document.write("<u></u>")
+            }
+            document.write("컴퓨터가 낳은 숫자: "+com+"<br>Up!<br>");
+            a=50-com;
+            b=com+1;
+            
+        }
+        }
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

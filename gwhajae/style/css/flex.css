@@ -1,0 +1,113 @@
+#flex1{
+    width: 1000px;
+    height: 300px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#flex1 div{
+    width: 100%;
+}
+.red{
+    background: red;
+}
+.yellow{
+    background: yellow;
+}
+.green{
+    background: green;
+}
+.blue{
+    background: blue;
+}
+#flex2{
+    width: 1000px;
+    height: 300px;
+    display: flex;
+    /* flex 기본 적용 값
+    flex-direction:row;
+    flex-wrap:nowrap; */
+}
+#flex2 div{
+    width: 25%;
+}
+.flexshape{
+    width: 1000px;
+    height: 300px;
+    display: flex;
+}
+#flex3{
+    justify-content: start;
+}
+#flex3 div{
+    width: 15%;
+}
+#flex4{
+    justify-content: end;
+}
+#flex4 div{
+    width: 15%;
+}
+#flex5{
+    justify-content: space-between;
+}
+#flex5 div{
+    width: 15%;
+}
+#flex6{
+    justify-content: space-around;
+}
+#flex6 div{
+    width: 15%;
+}
+#flex7{
+    align-items: center;
+}
+#flex7 div{
+    width: 15%;
+    height: 200px;
+}
+#flex8 div{
+    width: 15%;
+    height: 200px;
+}
+#flex8 .red{
+    align-self: flex-end;
+}
+#flex8 .yellow{
+    align-self: center;
+}
+#flex8 .green{
+    height: auto;
+    align-self: stretch;
+}
+#flex9{
+    flex-direction: column;
+    justify-content: space-between;
+}
+#flex9 div{
+    width: 25%;
+    height: 50px;
+}
+#flex9 .red{
+    order: 3;
+}
+#flex9 .green{
+    order: 1;
+}
+#flex10 div{
+    width: 120px;
+}
+#flex10 .red{
+    flex-grow: 1;
+}
+#flex10 .yellow{
+    flex-grow: 1;
+}
+#flex10 .green{
+    flex-grow: 0;
+}
+#flex10 .blue{
+    flex-grow: 2;
+}

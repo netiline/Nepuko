@@ -1,0 +1,21 @@
+table tr td{
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
+table tr td:last-child{
+    background-color: mediumaquamarine;
+}
+table tr:last-child td:nth-child(2){
+    background-color: burlywood;
+}
+input{
+    width: 425px;
+    height: 80px;
+    font-size: 30px;
+    border: 0;
+    border-top: 3px solid red;
+    border-bottom: 3px solid red;
+    outline: 0;
+}

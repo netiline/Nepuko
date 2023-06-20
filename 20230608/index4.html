@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+    /*
+        제어문
+            - 조건문 (if, switch)
+            - 반복문 (for, while, do~while)
+    if문 - 조건식의 결과가 참이냐 거짓이냐에 따라 코드를 실행 시켜주는
+           제어문
+           분기문이라고도 한다.
+        코드의 흐름을 점프해서 동작시키기 때문에 순차적 실행이 아님.
+    if (조건식){
+        조건식이 참이라면 실행할 코드
+    }
+    */
+    
+    // var age=2;
+    // if (age >= 20){
+    //     document.write("성인이다.")
+    //     var temp=123; // 지역변수 - 블럭안에서 생성된 변수는 해당블럭에서만 사용가능
+    //     temp=2323;
+    //     const pi = 3.14;
+    // }
+    // document.write("<br>나는 if문과 아무상관없이 동작합니다.")
+
+    // var age=2;
+    // if ( age >= 20 ){ // if 뒤의 {}는 조건식이 참일 경우에만 실행
+    //     document.write("성인이다.");
+    
+    // }
+    // else{ // else 뒤의 {}는 조건식이 거짓일 경우에만 실행
+    //     document.write("성인이 아니다.")
+    // }
+
+    // 바이킹 탑승 조건 키가 150 이상인 사람만 탈 수 있다.
+
+    // var tall = parseInt(prompt("당신의 키는?"));
+    // if (tall >= 150){
+    //     document.write("너 나의 동료가 되라.")
+    // }
+    // else{
+    //     document.write("넌 모찌나간다.")
+    // }
+
+    // 동전 앞면 뒷면 맞추기
+    // var coin = Math.floor(Math.random()*2)+1;
+    // var select = parseInt(prompt("1. 앞면 2. 뒷면"))
+    // if (coin == select){
+    //     document.write("맞췄을까요?")
+    // }
+    // else{
+    //     document.write("틀렸을까요?")
+    // }
+
+        // 주사위 1개를 던졌다. 2의 배수가 나올 경우에만 승리 아니면 패배
+
+        // var dice = Math.floor(Math.random()*6)+1;
+        // if (dice%2 == 0){
+        //     document.write("너의 주사위의 눈금은 "+dice+"이므로 생명연장 되었다.")
+        // }
+        // else{
+        //     document.write("너의 주사위의 눈금은 "+dice+"이므로 이상을 품고 익사해라.")
+        // }
+
+        // 가위바위보를 if문으로 만드세요
+
+        // var rsp = Math.floor(Math.random()*3)+1;
+        // var choice = parseInt(prompt("1. 가위 , 2. 바위 , 3. 보"));
+        // document.write("1. 가위 , 2. 바위 , 3. 보 <br> 당신이 낸 가위바위보 : "+ choice + "<br> 컴퓨터가 낸 가위바위보 : "+ rsp)
+        // if( rsp == choice){
+        //     document.write(" <br>저런 비겼네요. ")
+        // }
+        // if( (rsp - choice) == 1 || (rsp - choice) == -2){
+        //     document.write(" <br>저런 졌네요. ")
+        // }
+        // if((rsp-choice) == -1 || (rsp-choice) == 2){
+        //     document.write(" <br>당신이 최고야. ")
+        // }
+
+        // //조건에 따른 결과가 3개 이상이면 else if
+        // // 조건식이 두개 이상 필요한 경우 else if
+
+        // //주사위를 컴퓨터와 대결하기
+        // //주사위 각각 2개를 던진다
+        // //승리조건: 두 주사위 합이 큰쪽, 같은 숫자가 나온경우 승리
+
+        // var cpu1 = Math.floor(Math.random()*6)+1;
+        // var cpu2 = Math.floor(Math.random()*6)+1;
+
+        // var user1 = Math.floor(Math.random()*6)+1;
+        // var user2 = Math.floor(Math.random()*6)+1;
+
+        // var com_sum = (cpu1 + cpu2) , user_sum = (user1 + user2);
+
+        // if (user_sum > com_sum){ //나의 주사위 합이 더 큰 경우
+        //     if (cpu1 == cpu2){ //내 합이 더 크지만 컴퓨터 주사위 눈금이 같은 경우
+        //         if (user1 == user2){ // 컴퓨터 주사위가 같지만 나도 주사위가 같은 숫자인 경우
+        //             alert("나의 승리");
+        //         } else{
+        //             alert("나의 패배");
+        //         }
+        //     }
+        // } else{
+        //     alert("나의 승리");
+        // }else if(user_sum < com_sum){
+        //     if(user1==user2){
+        //         alert("나의 패배");
+        //     }if(cpu1=cpu2){
+        //         alert("나의 패배");
+        //     }else{
+        //         alert("나의 승리");
+        //     }
+        // }else{
+        //     alert("나의 패배");
+        // }else{
+        //     if( user1==user2 && com1==com2){
+        //         alert("비김");
+        //     }else if(user1==user2){
+        //         alert("나의 승리");
+        //     }else if(cpu1==cpu2){
+        //         alert("나의 패배");
+        //     }
+        // }else{
+        //     alert("비김");
+        // }
+        // 주차장의 기본요금이 1000원이다. 1000원에 기본 주차 시간은 30분이다.
+        // 10분 초과시 100원씩 추가요금있다.
+        // 2시간 이상 주차시 기본요금은 1500원이다.
+        // 주차 시간을 입력해서 주차요금이 얼마인지 출력하기 , 주차시간은 분단위 입력
+
+        // var cost = 1000;
+        // var time = parseInt(prompt("주차시간"));
+        // if( time >= 480){
+        //     document.write("주차요금 : " + 10000 + "원");
+        // }
+        // else if( 240 <= time){
+        //     var cost = 2500
+        //     document.write("주차요금 : " + (cost + 100*Math.floor((time-240)/10)) + "원");
+        // }
+        // else if( 120 <= time){
+        //     var cost = 1500;
+        //     document.write("주차요금 : "+ (cost+100*Math.floor((time-120)/10)) + "원");
+        // }
+        // else if( 30 <= time){
+        //     document.write("주차요금 : "+ (cost+100*Math.floor((time-30)/10)) + "원");
+        // }
+        // else {
+        //     document.write("주차요금 : "+ cost + "원")
+        // }
+
+
+        // // 점수가 100 ~90 A, 89~80 B, 79~70 C, 나머지는 F
+        // var score = parseInt(prompt("니 점수"));
+        // if(score <=100 && score >=90)
+        // alert("A등급")
+        // else if(score < 90 && score >=80)
+        // alert("B등급")
+        // else if(score < 80 && score >=70)
+        // alert("C등급")
+        // else
+        // alert("F등급")
+
+        //100미터 달리기, 10초 이하는 매우 빠름
+        // 10~12초 빠름 13~17초 보통 18 이상 느림
+
+        // var run_time = parseInt(prompt("달리기 시간"));
+        // if( run_time <= 10)
+        // document.write("오 넌 매우 빠르구나");
+        // else if( run_time > 10 && run_time <=12)
+        // document.write("오 넌 빠르구나");
+        // else if( run_time > 12 && run_time <=17)
+        // document.write("오 넌 보통이구나");
+        // else
+        // document.write("오 넌 굼벵이구나");
+
+
+
+/*
+
+랜덤숫자 6개 구하기
+6개의 랜덤 숫자 에서
+1번째 숫자는 1~100 사이
+2번째 숫자는 100~200사이
+3번재 숫자는 200~300사이
+4번째 숫자느 300~400사이
+5번째 숫자는 400~500사이
+6번째 숫자는 500~600 사이
+
+각 랜덤숫자가  12의 배수, 7의 배수, 988의 약수인지 각각 출력
+출력 내용은 예를들면 
+모두 해당사항이라면 12의배수이고 7의배수이고 998의약수 이다라고 출력
+2가지만 해당사항이라면 12의배수이고 7의배수이다라고 출력
+
+*/
+
+var random1 = Math.floor(Math.random()*100)+1;
+var random2 = Math.floor(Math.random()*101)+100;
+var random3 = Math.floor(Math.random()*101)+200;
+var random4 = Math.floor(Math.random()*101)+300;
+var random5 = Math.floor(Math.random()*101)+400;
+var random6 = Math.floor(Math.random()*101)+500;
+//random1
+if(random1%12 == 0){
+    if(random1%7 == 0){
+        document.write(random1+"은 12의 배수이고 7의 배수이다.");
+    }
+    else if(998%random1 == 0){
+        document.write(random1+"은 12의 배수이고 998의 약수이다.");
+    }
+    else if(998%random1 == 0 && random1%7 == 0){
+        document.write(random1+"은 12의 배수이고 7의 배수이고 998의 약수이다.");
+    }
+    else{
+        document.write(random1+"은 12의 배수이다.");
+    }
+}
+else if(random1%7 == 0){
+    if(998%random1 == 0){
+        document.write(random1+"은 7의 배수이고 998의 약수이다.");
+    }
+    else{
+        document.write(random1+"은 7의 배수이다.");
+    }
+}
+else if(998%random1 == 0){
+    document.write(random1+"은 998의 약수이다.")
+}
+else{
+    document.write(random1+"은 7의 배수도 12의 배수도 998의 약수도 아니다.")
+}
+// random2
+if(random2%12 == 0){
+    if(random2%7 == 0){
+        document.write("<br><br>"+random2+"은 12의 배수이고 7의 배수이다.");
+    }
+    else if(998%random2 == 0){
+        document.write("<br><br>"+random2+"은 12의 배수이고 998의 약수이다.");
+    }
+    else if(998%random2 == 0 && random2%7 == 0){
+        document.write("<br><br>"+random2+"은 12의 배수이고 7의 배수이고 998의 약수이다.");
+    }
+    else{
+        document.write("<br><br>"+random2+"은 12의 배수이다.");
+    }
+}
+else if(random2%7 == 0){
+    if(998%random2 == 0){
+        document.write("<br><br>"+random2+"은 7의 배수이고 998의 약수이다.");
+    }
+    else{
+        document.write("<br><br>"+random2+"은 7의 배수이다.");
+    }
+}
+else if(998%random2 == 0){
+    document.write("<br><br>"+random2+"은 998의 약수이다.")
+}
+else{
+    document.write("<br><br>"+random2+"은 7의 배수도 12의 배수도 998의 약수도 아니다.")
+}
+// random3
+if(random3%12 == 0){
+    if(random3%7 == 0){
+        document.write("<br><br>"+random3+"은 12의 배수이고 7의 배수이다.");
+    }
+    else if(998%random3 == 0){
+        document.write("<br><br>"+random3+"은 12의 배수이고 998의 약수이다.");
+    }
+    else if(998%random3 == 0 && random3%7 == 0){
+        document.write("<br><br>"+random3+"은 12의 배수이고 7의 배수이고 998의 약수이다.");
+    }
+    else{
+        document.write("<br><br>"+random3+"은 12의 배수이다.");
+    }
+}
+else if(random3%7 == 0){
+    if(998%random3 == 0){
+        document.write("<br><br>"+random3+"은 7의 배수이고 998의 약수이다.");
+    }
+    else{
+        document.write("<br><br>"+random3+"은 7의 배수이다.");
+    }
+}
+else if(998%random3 == 0){
+    document.write("<br><br>"+random3+"은 998의 약수이다.")
+}
+else{
+    document.write("<br><br>"+random3+"은 7의 배수도 12의 배수도 998의 약수도 아니다.")
+}
+// random4
+if(random4%12 == 0){
+    if(random4%7 == 0){
+        document.write("<br><br>"+random4+"은 12의 배수이고 7의 배수이다.");
+    }
+    else if(998%random4 == 0){
+        document.write("<br><br>"+random4+"은 12의 배수이고 998의 약수이다.");
+    }
+    else if(998%random4 == 0 && random4%7 == 0){
+        document.write("<br><br>"+random4+"은 12의 배수이고 7의 배수이고 998의 약수이다.");
+    }
+    else{
+        document.write("<br><br>"+random4+"은 12의 배수이다.");
+    }
+}
+else if(random4%7 == 0){
+    if(998%random4 == 0){
+        document.write("<br><br>"+random4+"은 7의 배수이고 998의 약수이다.");
+    }
+    else{
+        document.write("<br><br>"+random4+"은 7의 배수이다.");
+    }
+}
+else if(998%random4 == 0){
+    document.write("<br><br>"+random4+"은 998의 약수이다.")
+}
+else{
+    document.write("<br><br>"+random4+"은 7의 배수도 12의 배수도 998의 약수도 아니다.")
+}
+// random5
+if(random5%12 == 0){
+    if(random5%7 == 0){
+        document.write("<br><br>"+random5+"은 12의 배수이고 7의 배수이다.");
+    }
+    else if(998%random5 == 0){
+        document.write("<br><br>"+random5+"은 12의 배수이고 998의 약수이다.");
+    }
+    else if(998%random5 == 0 && random5%7 == 0){
+        document.write("<br><br>"+random5+"은 12의 배수이고 7의 배수이고 998의 약수이다.");
+    }
+    else{
+        document.write("<br><br>"+random5+"은 12의 배수이다.");
+    }
+}
+else if(random5%7 == 0){
+    if(998%random5 == 0){
+        document.write("<br><br>"+random5+"은 7의 배수이고 998의 약수이다.");
+    }
+    else{
+        document.write("<br><br>"+random5+"은 7의 배수이다.");
+    }
+}
+else if(998%random5 == 0){
+    document.write("<br><br>"+random5+"은 998의 약수이다.")
+}
+else{
+    document.write("<br><br>"+random5+"은 7의 배수도 12의 배수도 998의 약수도 아니다.")
+}
+// random6
+if(random6%12 == 0){
+    if(random6%7 == 0){
+        document.write("<br><br>"+random6+"은 12의 배수이고 7의 배수이다.");
+    }
+    else if(998%random6 == 0){
+        document.write("<br><br>"+random6+"은 12의 배수이고 998의 약수이다.");
+    }
+    else if(998%random6 == 0 && random6%7 == 0){
+        document.write("<br><br>"+random6+"은 12의 배수이고 7의 배수이고 998의 약수이다.");
+    }
+    else{
+        document.write("<br><br>"+random6+"은 12의 배수이다.");
+    }
+}
+else if(random6%7 == 0){
+    if(998%random6 == 0){
+        document.write("<br><br>"+random6+"은 7의 배수이고 998의 약수이다.");
+    }
+    else{
+        document.write("<br><br>"+random6+"은 7의 배수이다.");
+    }
+}
+else if(998%random6 == 0){
+    document.write("<br><br>"+random6+"은 998의 약수이다.")
+}
+else{
+    document.write("<br><br>"+random6+"은 7의 배수도 12의 배수도 998의 약수도 아니다.")
+}
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>

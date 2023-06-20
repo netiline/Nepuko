@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Sunflower:wght@500&display=swap');
+
+*, *:before, *:after{
+    box-sizing: border-box;
+} /* *은 현 페이지 전체를 의미함 */
+
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dd{
+    margin: 0;
+    padding: 0;
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+#wrap{
+    width: 1080px;
+    margin: 90%;
+    margin: 0 auto;
+}
+#main{
+    display: flex;
+}
+.top{
+    background: url(../image/milky-way-g7e9243389_1280.jpg);
+    background-size: cover;
+    overflow: hidden;
+    height: 200px;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+.main_image{
+    overflow: hidden;
+    height: 490px;
+    width: 15%;
+    border-radius: 10px;
+    background: url(../image/husky-g1918d00a3_1280.jpg);
+    background-size: contain;
+}
+.sub_image{
+    overflow: hidden;
+    height: 490px;
+    width: 15%;
+    border-radius: 10px;
+    background: url(../image/study-gaebd95c29_1280.png);
+    background-size: contain;
+}
+.main_content{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+
+}
+.content{
+    display: flex;
+    border-radius: 10px;
+    background-color: #0088cc;
+    margin-bottom: 20px;
+    overflow: hidden;
+    padding: 15px;
+    align-items: center;
+}
+.content_image{
+    width: 150px;
+    height: 120px;
+    overflow: hidden;
+}
+.content_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.content_list{
+    padding-left: 15px;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+}
+.content_list ul{
+    padding-left: 20px;
+}
+#footer{
+    display: flex;
+}
+.call_number{
+    background: url(../image/cat-ge6637bde1_1280.jpg);
+    background-size: cover;
+    margin: 0 20px 0 0;
+    border-radius: 10px;
+    flex-grow: 2;
+    line-height: 1.3;
+    color: rgb(255, 174, 53);
+    display: flex;
+    flex-direction: column;
+}
+.volenteer{
+    background: url(../image/cats-g55d7ab8b7_1280.png);
+    background-size: cover;
+    margin-right: 20px;
+    border-radius: 10px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.park{
+    background: url(../image/stress-gec1dc6736_1280.jpg);
+    background-size: cover;
+    border-radius: 10px;
+    flex-grow: 0;
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+}
+.volenteer > div{
+    display: flex;
+    margin: 15px 0 0 10px;
+}
+.volenteer_list{
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    line-height: 2;
+}
+.volenteer_list_content{
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    line-height: 2;
+    font-weight: 400;
+    margin-left: 10px;
+}
+.call_number h4{
+    font-size: 12px;
+    margin: 10px 0 0 10px;
+    flex-grow: 1;
+}
+.call_number h3{
+    font-size: 16px;
+    margin: 5px 0 0 10px;
+    flex-grow: 0;
+}
+.call_number h2{
+    font-size: 24px;
+    margin: 0 0 0 10px;
+    flex-grow: 1;
+}
+.call_number ul{
+    font-size: 12px;
+    list-style-type: none;
+    margin: 15px 0 0 10px;
+    flex-grow: 2;
+    line-height: 2;
+}
+.volenteer h3{
+    font-size: 12px;
+    margin: 5px 0 0 10px
+}
+.volenteer h2{
+    font-size: 16px;
+    margin: 5px 0 0 10px;
+}
+.volenteer h2 u{
+    text-decoration: none;
+    color: #c9cc00;
+}
+.volenteer h2 b{
+    color: #cc8b00;
+}
+.park h2{
+    font-size: 24px;
+    margin: 10px 70px 0 10px;
+}
+.park h3{
+    font-size: 10px;
+    margin: 10px 60px 0 10px;
+}

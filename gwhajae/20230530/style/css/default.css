@@ -1,0 +1,79 @@
+#wrap{
+    width: 1200px;
+    margin: 0;
+    padding: 0;
+}
+.first{
+    width: 1200px;
+    height: 300px;
+    display: flex;
+}
+.first .red{
+    width: 150px;
+    background-color: red;
+    flex-grow: 0;
+}
+.first .green{
+    width: 150px;
+    background-color: green;
+    flex-grow: 2;
+}
+.second{
+    width: 1200px;
+    height: 300px;
+    display: flex;
+}
+.second .blue{
+    width: 150px;
+    background-color: blue;
+    flex-grow: 1;
+}
+.second .yellow{
+    width: 150px;
+    background-color: yellow;
+    flex-grow: 1;
+}
+.second .purple{
+    width: 150px;
+    background-color: purple;
+    flex-grow: 1;
+}
+.third{
+    width: 1200px;
+    height: 300px;
+    display: flex;
+}
+.third .orange{
+    width: 300px;
+    background-color: orange;
+    flex-shrink: 1;
+}
+.third .black{
+    width: 300px;
+    background-color: black;
+    flex-shrink: 1;
+}
+.third .gray{
+    width: 300px;
+    background-color: gray;
+    flex-shrink: 1;
+}
+.third .yellowgreen{
+    width: 300px;
+    background-color: yellowgreen;
+    flex-shrink: 1;
+}
+.third .brown{
+    width: 300px;
+    background-color: brown;
+    flex-shrink: 1;
+}
+.fourth{
+    width: 1200px;
+    height: 300px;
+}
+.fourth .darkcyan{
+    width: 1200px;
+    height: 300px;
+    background-color: darkcyan;
+}

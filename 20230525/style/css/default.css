@@ -1,0 +1,153 @@
+body{
+    /* body에 여백을 제거하여 화면에 꽉 채우기 위함*/
+    padding: 0;
+    margin: 0;
+    background-color: #818181;
+    color: #e6e6e6;
+    position: relative;
+}
+
+#wrap{
+    position: relative;
+    width: 100%;
+}
+#header{
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #878c9e;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex; /*한줄정렬*/
+    padding: 20px 0;
+    font-size: 25px;
+    justify-content: space-around;/*display가 flex나 grid일 경우에만 가능*/
+    /*overflow: hidden;*/
+    /*바깥으로 나가는 것을 다 감춘다. overflow나 inline의 경우 자식태그들도 전부 표현을 할 수 있다.*/
+}
+#header div{
+    /*float: left;
+    /*float를 쓰면 문서 흐름에서 아예 독립을 해버림*/
+    /*자식 태그에서 float이 들어가면 부모 태그를 무시하고 정렬이 됨. 따라서 부모의 높이는 0이 된다.*/
+    /*padding: 20px 40px; 모든 영역에 영향을 끼치므로 이젠 안씀*/
+}
+#section{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 15px;
+}
+.banner{
+    /*background: #a1a5b6;*/
+    width: 80%;
+    height: 800px;
+}
+.menubar{
+    width: 20%;
+    height: 800px;
+    /*background: #6f7486;*/
+}
+.banner .mainimage{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+.banner .mainimage img{
+    width: 100%;
+}
+.notice_adImg{
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+.notice_adImg .noticeBox{
+    width: 70%;
+    position: relative;
+}
+.notice_adImg .noticeBox .notice_list{
+    /*공지사항 ul태그*/
+    /*list-style-type: circle;*/
+    /*list-style-image: url(../image/listIcon.png);*/
+    list-style-type: none;
+}
+.notice_adImg .noticeBox .notice_list li:before{
+    /*가상으로 들어가게 해주는 요소*/
+    content: '';
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    background-image: url(../image/listIcon.png);
+    background-size: 15px;
+    background-repeat: no-repeat;
+    /*이미지 영역이 이미지보다 큰 경우 무조건 바둑판으로 나오는데 그걸 막기 위하여 no-repeat를 사용함*/
+    margin-right: 7px;
+}
+.notice_adImg .noticeBox .notice_list li{
+    /*공지사항 ul태그 밑에 있는 리스트 태그*/
+    padding: 5px 0;
+}
+.notice_adImg .noticeBox .notice_more{
+    /* 공지사항에 more 텍스트 있는 h5*/
+    position: absolute;
+    top: 0;
+    right: 20px;
+}
+.notice_adImg .adImg_box{
+    width: 30%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+.notice_adImg .adImg_box img{
+    width: 100%;
+}
+.coopbox{
+    width: 100%;
+}
+.coopbox .imageList{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+.coopbox .imageList img{
+    width: 140px;
+}
+.login_wrap{
+    text-align: center;
+    border: 1px solid #cbcbcb;
+    height: 120px;
+}
+.subMenu_wrap{
+    margin-top: 75px;
+    padding: 0;
+}
+.subMenu_wrap .subMenu_list{
+    list-style-type: none;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+}
+.subMenu_wrap .subMenu_list .list{
+    padding: 10px;
+}
+.subMenu_wrap .subMenu_list .list:hover{
+    color: black;
+    background: #878c9e;
+    cursor: pointer;
+}
+#footer{
+    width: 1200px;
+    margin: 0 auto;
+}
+.ft{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.ft li{
+    padding-right: 30px;
+}

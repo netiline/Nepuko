@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+            var a=0,b=0,c=0;
+        while(a==b || a==c || b==c){  //3개 숫자 중복없이
+            a=Math.floor(Math.random()*9)+1;
+            b=Math.floor(Math.random()*9)+1;
+            c=Math.floor(Math.random()*9)+1;
+        }
+        var result="";
+        while(true){
+            var str=0,ball=0;
+            var u1=parseInt(prompt("1~9"));
+            var u2=parseInt(prompt("1~9"));
+            var u3=parseInt(prompt("1~9"));
+            if(u1==a) str++;
+            if(u2==b)str++;
+            if(u3==c)str++;
+            if(u1==b || u1==c)ball++;
+            if(u2==a || u2==c)ball++;
+            if(u3==a || u3==b)ball++;
+            result+=u1+" "+u2+" "+u3+"\n"+str+"스트라이크 "+ball+"볼 "+(3-str-ball)+"아웃\n"
+            alert(result);
+            if(str==3)break;
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

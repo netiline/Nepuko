@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 제어문은 공통적으로 조건에 의해 동작한다.
+        // 반복문은 정해진 횟수만큼 반복을 시킬 수 있고 무한대로 반복 할 수도 있다.
+        // 반복문 사용시 무한루프에 빠지지않게 코드를 작성해야 한다.
+        // 반복문에 무한루프를 사용 시에는 항시 빠져나올 수 있는 코드를 둬야한다.
+
+        // 반복문은 기본적으로 지정된 횟수만큼 실행 될 수 있다.
+        // 지정된 횟수만큼 실행되려면 처음 시작값과 끝값이 필요하다.
+        // 시작값을 1, 끝값을 10으로 설정하면 1,2,3,4,5,6,7,8,9,10 총 숫자가
+        // 10개이므로 반복횟수는 10번 반복된다.
+        // 시작값과 끝나는 값을 설정하고 시작값에서 얼마씩 증가할 것인지, 또는 감소할 것인지 설정도 필요하다.
+        // 증가 또는 감소의 값에 따라서 반복되는 횟수가 달라진다.
+
+        // for(시작값 ; 끝나는값 ; 증가 또는 감소값){
+
+        // }
+
+        // for(var i=1; i<=10; i++){
+        //     document.write("<div>"+i+"</div>");
+        // }
+
+        // 실습 3. 1~120 3씩 증가해서 출력
+        // for(var i=1; i<=120; i=i+3){
+        //     document.write("<div>"+i+"<\/div>");
+        // }
+
+        //실습 4. 정수 하나를 입력하고, 입력한 숫자를 시작값으로 하여 12번 반복하는 반복문 만들기
+    //     var num=parseInt(prompt("정수를 입력하시오."));
+    //     for(var i=1; i<=12; i++){
+    //         document.write("<div>"+(num+(i-1))+"</div>");
+    //     }
+
+    // var num=parseInt(prompt("정수 입력"));
+    // for (var i=num; i<num+12; i++){
+    //     document.write("<div>"+i+"<\/div>");
+    // }
+    // var count=0;
+
+    // for(var i=1; i<=100; i++){
+    //     if(i%4==0)
+    //     count++;
+    // }
+    // document.write("1~100 중 4의 배수는 "+count+"개");
+
+    // var win=0, lose=0;
+    // for(var i=1; i<=10; i++){
+    //     var coin = Math.floor(Math.random()*2)+1; //동전던지기
+    //     var user = parseInt(prompt("1. 앞면 2. 뒷면"));
+    //     if( coin == user ){
+    //         document.write("정답<br>");
+    //         win++;
+    //     }
+    //     else{
+    //         document.write("오답<br>");
+    //         lose++;
+    //     }
+    // }
+    // document.write("정답 횟수 : "+win+"<br>오답 횟수 : "+lose+"<br>");
+
+    // 주사위 던지기 게임 10번
+    // 컴터와 내가 주사위를 던진다. 숫자가 큰쪽이 승리, 같은 숫자면 비김
+    // 10판 해서 내가 몇번 이기고 지고 비겼는지 출력
+
+    // var win=0, lose=0, draw=0;
+    // for(var i=1; i<=10; i++){
+    //     var com=Math.floor(Math.random()*6)+1;
+    //     var user=Math.floor(Math.random()*6)+1;
+    //     document.write("<div> COM 눈금 수:"+com+"<br> USER 눈금 수:"+user+"<br><br> ");
+    //     if(com==user){
+    //         draw++;
+    //     }
+    //     else if(com>user){
+    //         lose++;
+    //     }
+    //     else{
+    //         win++;
+    //     }
+    // }
+    // document.write("승리 :"+win+"<br>비김 :"+draw+"<br>패배 :"+lose);
+
+    
+    var random = Math.floor(Math.random()*50)+1;
+    var fixed;
+    while(fixed !== random){
+        fixed = parseInt(prompt("1-50까지의 숫자를 입력하시오."));
+
+        if(fixed > random){
+            alert("Down");
+        }
+        else if(fixed < random){
+            alert("Up");
+        }
+        else{
+            document.write("랜덤숫자 : "+random+"<br>정답!");
+            break;
+        }
+    }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

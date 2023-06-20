@@ -1,0 +1,15 @@
+button{
+    margin: 10px;
+}
+.score{
+    margin: 10px 0;
+}
+.number{
+    border: 1px solid black;
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+}
+.number input{
+    margin: 10px 0;
+}

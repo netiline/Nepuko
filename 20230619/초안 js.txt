@@ -1,0 +1,52 @@
+function calc(){
+    var kor = parseInt(document.getElementById("kor").value);
+    var math = parseInt(document.getElementById("math").value);
+    var eng = parseInt(document.getElementById("eng").value);
+    //국어 점수
+    if(kor >= 90)
+    document.getElementById("kor_grade").innerHTML= "A등급";
+    else if(kor>=80)
+    document.getElementById("kor_grade").innerHTML= "B등급";
+    else if(kor>=70)
+    document.getElementById("kor_grade").innerHTML= "C등급";
+    else if(kor<70)
+    document.getElementById("kor_grade").innerHTML= "F등급";
+    //수학 점수
+    if(math >= 90)
+    document.getElementById("math_grade").innerHTML= "A등급";
+    else if(math>=80)
+    document.getElementById("math_grade").innerHTML= "B등급";
+    else if(math >=70)
+    document.getElementById("math_grade").innerHTML= "C등급";
+    else if(math<70)
+    document.getElementById("math_grade").innerHTML= "F등급";
+    //영어  점수
+    if(eng >= 90)
+    document.getElementById("eng_grade").innerHTML= "A등급";
+    else if(eng>=80)
+    document.getElementById("eng_grade").innerHTML= "B등급";
+    else if(eng>=70)
+    document.getElementById("eng_grade").innerHTML= "C등급";
+    else if(eng<70)
+    document.getElementById("eng_grade").innerHTML= "F등급";
+
+    var res = document.getElementById("result");
+    var mean = document.getElementById("mean");
+    var grade = document.getElementById("grade");
+    var calc = kor+math+eng;
+    var mean_grade = (calc/3).toFixed(1);
+
+    // 총점수 계산
+    res.innerHTML=calc+"점";
+    // 평균 계산
+    mean.innerHTML=mean_grade+"점";
+    // 평균 등급계산
+    if(mean_grade >= 90)
+    document.getElementById("grade").innerHTML= "A등급";
+    else if(mean_grade>=80)
+    document.getElementById("grade").innerHTML= "B등급";
+    else if(mean_grade>=70)
+    document.getElementById("grade").innerHTML= "C등급";
+    else
+    document.getElementById("grade").innerHTML= "F등급"
+}

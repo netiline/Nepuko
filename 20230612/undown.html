@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    // 이 문제는 매 수업 때마다 하는 문제인데 완성할 확률은 1% 였음
+
+        // var i=50, k=1, max=50;
+        // while(true){
+        // var user = parseInt(prompt("유저가 집어넣는 공간(1~50까지의 숫자)"));
+        // if (user > 50){
+        //     alert("51 이상 넣으면 터진다....")
+        // } else{
+        //     break;
+        // }
+        // }
+        // while(true){
+        //     var com = Math.floor(Math.random()*i)+k;
+        //     if(user==com){
+        //         document.write("너가 넣은 숫자다: "+user+"<br>컴퓨터가 낳은 숫자: "+com+"<br>"); break;
+        //     }
+        //     if(user<com){
+        //         document.write("컴퓨터가 낳은 숫자: "+com+"<br>Down!<br>현재범위: "+k+"~"+max+"<br>");
+        //         k == k;
+        //         max = com-1;
+        //         i = max-k+1;
+        //     }
+        //     if(user>com){
+        //         document.write("컴퓨터가 낳은 숫자: "+com+"<br>Up!<br>현재범위: "+k+"~"+max+"<br>");
+        //         k = com+1;
+        //         i = max-k+1;
+        //     }
+        // }
+
+        // 실습 1.
+        // 랜덤범위 1~100, 무한루프 사용
+        // 랜덤 값 중 4의 배수의 값이 10개가 나오면 무한루프 중지
+
+
+        // var count = 0;
+        // while(true){
+        //     var random = Math.floor(Math.random()*100)+1;
+        //         if( random%4 != 0){
+        //             document.write("루프에 나온 값 : "+random+"<br>");
+        //         }
+        //         if( random%4 == 0){
+        //             count = count+1
+        //             document.write("루프에 나온 값 : "+random+"<br>카운트 수:"+count+"<br>");
+        //         }
+        //         if(count == 10){
+        //             document.write("루프가 종료되었습니다.<br>카운트 수:"+count+"<br>");
+        //             break;
+        //         }
+        //     }
+
+        // 실습 2.
+        // 10번을 반복하기
+        // 반복문 안에서 정수를 입력하고, 입력한 정수 출력하기
+
+        // for(i=1; i<=10; i++){
+        //     var input=parseInt(prompt("정수를 입력하세요."));
+        //     document.write("당신이 입력한 정수 : "+input+"<br>");
+        // }
+        
+        // var cnt=0
+        // while(true){
+        //     var input = parseInt(prompt("정수를 입력하세요."));
+        //     if(input == input){
+        //         document.write("당신이 입력한 정수 : "+input+"<br>");
+        //         cnt++;
+        //     }
+        //     if(cnt == 10){
+        //         break;
+        //     }
+        // }
+
+        // 실습 3.
+        // 문제 1. 숫자 야구 게임
+        // 랜덤값으로 3개의 숫자 뽑아내기 (단, 3개의 숫자는 중복 아님)
+        // 란도무 범위는 1~9
+        // 랜덤 숫자 3개를 맞출 때 까지 계속하기
+        // 3개의 숫자를 입력합니다.
+        // 랜덤 숫자가 8 3 5이고
+        // 1입력 2 입력 8입력 했다면 0스트라이크 1볼 2아웃 이라고 출력
+        // 3입력 9입력 6 입력 했다면 0스트라이크 0볼 3아웃
+        // 5입력 3입력 8입력 했다면 1스트라이크 2볼 0아웃 이라고 출력
+        // 자리와 숫자가 일치하면 스트라이크 자리가 다르고 숫자만 있다면 볼, 없는 숫자는 아웃
+
+        // 문제 2. 배스킨 라빈스 31
+        // 컴퓨터와 1:1 게임
+        // 숫자 몇개 낼 것인지 입력
+        // 2라고 입력했으면 자동으로 1 2 라고 출력 되어야 함
+        // 그 다음 컴퓨터가 몇 개 낼 것인지 랜덤으로 정하기
+        // 3이라고 하면 자동으로 3 4 5라고 출력
+        // 먼저 31이 나오는 쪽이 패배
+// 게임 변수 설정
+var currentPlayer = "플레이어"; // 현재 플레이어 (플레이어 또는 컴퓨터)
+var currentNumber = 1; // 현재 숫자
+var maxNumber = 31; // 게임의 최대 숫자
+
+// 게임 시작 함수
+function startGame() {
+  var chosenNumber = parseInt(prompt("몇 개의 숫자를 낼 것인지 입력하세요:"));
+
+  if (isNaN(chosenNumber) || chosenNumber < 1) {
+    alert("유효하지 않은 숫자입니다. 게임을 종료합니다.");
+    return;
+  }
+
+  currentPlayer = "플레이어";
+  currentNumber = 1;
+
+  while (true) {
+    playTurn(chosenNumber);
+    if (currentNumber >= maxNumber) {
+      // 31을 만들었을 경우, 현재 플레이어가 패배
+      alert(currentPlayer + "이(가) 패배했습니다!");
+      break;
+    }
+
+    currentPlayer = currentPlayer === "플레이어" ? "컴퓨터" : "플레이어";
+  }
+}
+
+// 턴 진행 함수
+function playTurn(chosenNumber) {
+  if (currentPlayer === "플레이어") {
+    // 플레이어 턴
+    var numbersToSay = [];
+    for (var i = currentNumber; i < currentNumber + chosenNumber; i++) {
+      numbersToSay.push(i);
+    }
+    currentNumber += chosenNumber;
+
+    alert("플레이어의 차례입니다. 낼 숫자: " + numbersToSay.join(" "));
+  } else {
+    // 컴퓨터 턴
+    var computerNumber = Math.min(3, maxNumber - currentNumber + 1);
+    currentNumber += computerNumber;
+
+    alert("컴퓨터의 차례입니다. 낼 숫자: " + currentNumber);
+  }
+}
+
+// 게임 시작
+startGame();
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

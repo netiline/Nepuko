@@ -1,0 +1,17 @@
+.com{
+    display: flex;
+    justify-content: center;
+}
+.com img{
+    width: 200px;
+    margin: 20px 0;
+}
+.user{
+    display: flex;
+    justify-content: space-around;
+}
+.user img{
+    width: 100px;
+    cursor: pointer;
+    margin: 10px 0;
+}

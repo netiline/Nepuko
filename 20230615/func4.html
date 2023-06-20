@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/css/func4.css">
+    <script src="./style/js/func4.js"></script>
+</head>
+<body>
+    <!--
+        구글 드라이브에 image 폴더에 paper. rock. scissors 이미지 가져가서
+        가위바위보 게임 만들기
+        동전게임처럼
+    -->
+    <button onclick="start()">START</button>
+
+    <div ><h1>컴퓨터 가위바위보</h1></div>
+    <div class="com">
+        <img id="rsp" src="./style/image/paper.png">
+    </div>
+    <div><h1>나의 가위바위보</h1></div>
+    <div class="user">
+        <img onclick="result(0)" src="./style/image/paper.png">
+        <img onclick="result(1)" src="./style/image/rock.png">
+        <img onclick="result(2)" src="./style/image/scissors.png">
+    </div>
+    <div><br> 너의 결과는? : <div id="result"></div></div>
+</body>
+</html>

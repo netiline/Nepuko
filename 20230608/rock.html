@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>document</title>
+    <script>
+        // var random = parseInt(prompt("1. red , 2. yellow , 3. pink"));
+
+        // if( random == 1)
+        // document.write("<div class=red></div>");
+        // else if( random == 2)
+        // document.write("<div class=yellow></div>");
+        // else
+        // document.write("<div class=pink></div>");
+
+// red이라고 입력하면 빨간색 사각형이
+// yellow이라고 입력하면 노랑색 사각형이
+// blue이라고 입력하면 파랑색 사각형이 그려지게 만드시오.
+
+        // var random = prompt("원하는 배경색은?")
+        // document.write("<div class ="+random+"></div>");
+
+        // if( random == "red")
+        // document.write("<div class=red></div>");
+        // else if( random == "yellow")
+        // document.write("<div class=yellow></div>");
+        // else if( random == "blue")
+        // document.write("<div class=blue></div>");
+
+// 주사위 게임 문제
+// 주사위가 3개있다.
+// 3개의 주사위를 굴렸을 때 나온 숫자를 각각 a,b,c 라고 한다면
+// 세 숫자가 모두 다른 경우 a+b+c의 값 출력
+// 두 숫자가 같고 나머지가 다른 숫자라면 a*a+b*b+c*c 값 출력
+// 세 숫자가 모두 같다면 a*b*c의 값 출력
+
+        var a = Math.floor(Math.random()*6)+1;
+        var b = Math.floor(Math.random()*6)+1;
+        var c = Math.floor(Math.random()*6)+1;
+
+        // if( a == b){
+        //     if( b == c){
+        //         document.write( "주사위 A 눈금 : " + a + "<br>주사위 B 눈금 : "+b+"<br>주사위 C 눈금 : "+c+"<br>주사위 눈금 계산 : " +(a*b*c) + "<br> 사용한 계산식은 a×b×c 입니다.");
+        //     }
+        //     else{
+        //         document.write( "주사위 A 눈금 : " + a + "<br>주사위 B 눈금 : "+b+"<br>주사위 C 눈금 : "+c+"<br>주사위 눈금 계산 : " +(a*a+b*b+c*c) + "<br> 사용한 계산식은 a×a+b×b+c×c 입니다.");
+        //     }
+        // }
+        // else if( b == c ){
+        //     document.write( "주사위 A 눈금 : " + a + "<br>주사위 B 눈금 : "+b+"<br>주사위 C 눈금 : "+c+"<br>주사위 눈금 계산 : " +(a*a+b*b+c*c) + "<br> 사용한 계산식은 a×a+b×b+c×c 입니다.");
+        // }
+        // else if( a == c){
+        //     document.write( "주사위 A 눈금 : " + a + "<br>주사위 B 눈금 : "+b+"<br>주사위 C 눈금 : "+c+"<br>주사위 눈금 계산 : " +(a*a+b*b+c*c) + "<br> 사용한 계산식은 a×a+b×b+c×c 입니다.");
+        // }
+        // else{
+        //     document.write( "주사위 A 눈금 : " + a + "<br>주사위 B 눈금 : "+b+"<br>주사위 C 눈금 : "+c+"<br>주사위 눈금 계산 : " +(a+b+c)+ "<br> 사용한 계산식은 a+b+c 입니다.");
+        // }
+
+        if( a != b && a != c && b != c){
+            document.write("모두 다르다면 :" +(a+b+c));
+        }
+        else if( (a == b && b !=c) || (a == c && b != c) || (a != b && b == c)){
+            document.write("두 숫자가 같다면 :" +(a*a+b*b+c*c));
+        }
+        else if( a == b && b == c){
+            document.write("모두 같다면 :" + (a*b*c));
+        }
+    </script>
+    <style>
+        .red{
+            background-color: red;
+            width: 200px;
+            height: 100px;
+        }
+        .yellow{
+            background-color: yellow;
+            width: 200px;
+            height: 100px;
+        }
+        .pink{
+            background-color: pink;
+            width: 200px;
+            height: 100px;
+        }
+        .blue{
+            background-color: blue;
+            width: 200px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Sunflower:wght@500&display=swap');
+
+*, *:before, *:after{
+    box-sizing: border-box;
+} /* *은 현 페이지 전체를 의미함 */
+
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dd{
+    margin: 0;
+    padding: 0;
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+a{
+    text-decoration: none;
+    color: inherit; /* 상속 */
+}
+#wrap{
+    max-width: 1080px;
+    margin: 90%;
+    margin: 0 auto;
+}
+#header{
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 20px;
+    border-bottom: 1px solid #d0d0d0;
+    background: #fff;
+    position: sticky;
+    z-index: 100;
+    top:0;
+}
+.header-logo{
+    width: 100px;
+}
+.header-nav{
+    display: flex;
+    align-items: center;
+}
+.header-nav a{
+    margin-left: 15px;
+}
+.header-nav a:nth-child(2){
+    display: flex;
+    align-items: center;
+    padding: 7px 17px;
+    color: #fff;
+    background: #000;
+    border-radius: 7px;
+}
+.header-nav a:nth-child(2) i{
+    padding-left: 5px;
+}
+/*.main{
+    display: flex;
+    margin: 10px;
+    padding: 0;
+    max-width: 100%;
+}
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 20px;
+}
+.flexitem{
+    display: flex;
+    border: 1px solid #494949;
+    border-radius: 5px;
+    margin-bottom: 3.3%;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: space-between;
+}
+.product-img{
+    max-width: 300px;
+    max-height: 300px;
+}
+.product-content{
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.like{
+    align-self: flex-end;
+}
+*/
+.main{
+    padding: 15px 0;
+}
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+.flexitem{
+    width: 30%;
+    max-width: 300px;
+    border: 1px solid #d0d0d0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.product-img{
+
+}
+.product-content{
+    display: flex;
+    justify-content: space-between;
+    padding: 7px;
+}
+.product-info{
+    font-size: 13px;
+}
+.title{
+
+}
+.price{
+
+}
+.like{
+    align-self: flex-end;
+}
+/*바깥쪽에서 안쪽으로 갈 수록 적을게 없어야함*/
+/*
+@media 조건{
+    스타일 속성: 속성 값;
+}
+@media 키워드 논리연산자 (조건){
+}
+키워드- all, screen, print, tv, tty, projection 등등
+논리연산자 - and, or
+    and - 양쪽 조건이 모두 참인 경우에 참
+    or - 한쪽의 조건만 참이면 참
+조건 - max-width(이하), min-width(이상)
+    가로모드: orientation:landscape
+    세로모드: orientation:protrait
+    너비와 높이 비율
+    aspect-ratio: 6/4 -> 너비가 6 높이가 4 6:4 비율
+    색상 비트수( 색상 표현 정도)
+    color:8 -> 색상이 8비트 (2^8=256 색상)라면
+(참고) 반응형 사이트를 서 pc 환경으로 제작 (개발자 입장에서는 이것이 편함)
+       2. pc 환경에서 모바일 환경으로 제작
+*/
+
+@media screen and (max-width:768px){ /* 너비가 768px 이하라면 */
+    .flex{
+        column-gap: 15px;
+    }
+    .flexitem{
+        width: 40%;
+    }
+}
+@media screen and (max-width: 576px) {
+    .flexitem{
+        width: 90%;
+    }
+    
+}

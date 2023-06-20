@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <script src="./static/js/index.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="score">
+        <div class="number">
+            <div>
+                국어 점수
+            </div>
+            <input type="number" id="kor" min="0" max="100">
+            <div>등급 : <b id="kor_grade"></b></div>
+        </div>
+        <div class="number">
+            <div>
+                수학 점수
+            </div>
+            <input type="number" id="math" min="0" max="100">
+            <div>등급 : <b id="math_grade"></b></div>
+        </div>
+        <div class="number">
+            <div>
+                영어 점수
+            </div>
+            <input type="number" id="eng" min="0" max="100">
+            <div>등급 : <b id="eng_grade"></b></div>
+        </div>
+    </div>
+    <button onclick="calc()">계산하기</button>
+    <div class="number">
+        <div>총 점수 : <b id="result"></b></div>
+        <div>평균 : <b id="mean"></b></div>
+        <div>평균등급 : <b id="grade"></b></div>
+    </div>
+</body>
+</html>

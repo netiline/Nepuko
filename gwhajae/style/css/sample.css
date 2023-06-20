@@ -1,0 +1,34 @@
+*{padding: 0; margin: 0;}
+li{list-style: none;}
+a{text-decoration: none;font-size: 25px;}
+.menu{
+    width: 900px;
+    overflow: hidden;
+    margin: 50px auto;
+}
+.menu li{
+    width: 20%;
+    float: left;
+    text-align: center;
+    line-height: 40px;
+    background-color: #5778ff;
+}
+.menu a{
+    color: #fff;
+}
+.submenu li{
+    line-height: 50px;
+    background-color: #94a9ff;
+}
+.submenu{
+    height: 0;
+    overflow: hidden;
+}
+.menu li:hover{
+    background-color: #94a9ff;
+    transition-duration: 0.5s;
+}
+.menu li:hover .submenu{
+    height: 250px;
+    transition-duration: 1s;
+}

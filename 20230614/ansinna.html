@@ -1,0 +1,29 @@
+<!-- 오늘의 과제
+계림 카페 주문하기
+주문내용은 음료명, 아이스 또는 핫, 사이즈 (m,l)
+
+음료 하나만 주문이 아니라 여러개 주문내역이 나와야 한다.
+
+예) 아메리카노, 아이스 , M -2000원
+
+힌트 -모든 함수에서 사용할 수 있는 변수를 생성하려면 함수 밖에 만들면 된다.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./style/js/ansinna.js"></script>
+    <link rel="stylesheet" href="./style/css/ansinna.css">
+</head>
+<body>
+    음료명 : <input type="text" id="drink"><br>
+    아이스.핫 : <input type="text" value="ice" id="ice_hot"><br>
+    사이즈 : <input type="text" value="M" id="size"><br>
+    <button onclick="order()">주문하기</button><br>
+
+    <div id="list"></div>
+</body>
+</html>

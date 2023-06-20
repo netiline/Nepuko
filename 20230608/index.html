@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+// 문제 1.
+// 반지름이 r인 원형 트랙이 있다.
+// 원형 트랙 위로 자동차 한 대가 달리고 있다.
+// 자동차는 시속 v로 달리고 있다.
+// 자동차가 트랙을 한바퀴 완주하는데 몇 분이 걸리는가?
+
+        var r=Number(prompt("반지름을 입력하시오."));
+        var v=Number(prompt("시속을 입력하시오."));
+        var dist=Math.PI*2*r;
+
+        document.write("자동차가 "+v+"km/h의 속도로 움직일 때, "+r+"km의 반지름을 가지는 원형 트랙을 한 바퀴 완주하는데 걸리는 시간은"+((dist/v)*60)+"분 이다."+"<br>");
+
+// 변수가 생성되어야 사용 가능.
+// 코드의 동작은 작성한 순서대로 실행된다.(함수는 예외)
+// 변수에 값이 있어야 출력이 되고 계산이 된다.
+
+// 문제 2.
+
+        var redCup=10;
+        var blueCup=20;
+        var whiteCup=0;
+
+        whiteCup = redCup;
+        redCup = blueCup;
+        blueCup = whiteCup;
+
+        document.write("<br>10빨간컵은 "+redCup);
+        document.write("<br>파랑컵은 "+blueCup+"<br><br>");
+
+
+// ? 에 들어갈 코드를 작성하세요
+// 실행하면 결과는 빨간컵은 20
+//                파랑컵은 10
+// 단, redCup=20 이렇게 하면 안됨!
+        
+// 변수의 데이터를 다른 변수에 저장할 수 있다.
+// 다른 변수에 저장을 해도 현재 변수에 데이터는 유지된다.
+// 변수에 값이 존재하는 상태에서 다른 값을 저장하면
+// 덮어쓰기로 저장되어 이전 값은 찾을 수 없게 된다.
+
+// 상수 - 데이터를 저장하는 메모리 공간 (읽기)
+// 변수 - 데이터를 저장하는 메모리 공간 (읽기, 쓰기)
+// 상수 선언 방법
+const pi = 3.14; // const는 같은 이름의 변수로 재선언 불가능.
+// 상수를 사용하는 이유
+// 불변의 값을 저장해서 사용한다. 숫자나 문자열 데이터 대신 이름 상수를 사용
+var r = 5;
+r = 10;
+var r = 1000; // var은 같은 이름의 변수로 재선언이 가능.
+// 연산자
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
