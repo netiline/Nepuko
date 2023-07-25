@@ -144,7 +144,7 @@ a{
   }
   
   .slide:nth-of-type(2) {
-    background: url(../images/ad1.png);
+    background: url(../images/ad2.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -152,12 +152,18 @@ a{
   }
   
   .slide:nth-of-type(3) {
-    background: url(../images/ad2.png);
+    background: url(../images/ad3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     z-index: -1;
   }
   
   .slide:nth-of-type(4) {
-    background: #D1D1D4;
+    background:url(../images/ad4.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     z-index: -1;
   }
   
