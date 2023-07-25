@@ -1,6 +1,6 @@
 
 let path="./static/image/";
-let image_name=["Chick.jpg","Crocodile.jpg","Dinosaur.jpg","Dolphin.jpg","Rabbit.jpg","Stingray.jpg"];
+let image_name=["1.png","2.png","3.png","4.png","5.png","6.png"];
 let image_position=new Array(); // 이미지 출력할 위치 배열
 let isStart=false; // start 버튼 클릭 유무
 let count=0;  // 클릭횟수
