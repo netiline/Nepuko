@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지하철 만들기</title>
+    <style>
+        .subway {
+            width: 100px;
+            height: 50px;
+            border: 1px solid black;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const totalStations = 40;
+            const trainCount = 4;
+            const interval = 3000; // 3 seconds
+            const moveInterval = 4000; // 4 seconds
+
+            let currentPositions = [1, 1, 1, 1];
+            let timerId;
+
+            function updateSubwayPosition() {
+                const subwayElements = document.getElementsByClassName("subway");
+                for (let i = 0; i < subwayElements.length; i++) {
+                    const subwayElement = subwayElements[i];
+                    subwayElement.innerText = `지하철 ${i+1}호차: ${currentPositions[i]}역`;
+                }
+            }
+
+            function moveSubway() {
+                for (let i = 0; i < trainCount; i++) {
+                    currentPositions[i] = (currentPositions[i] % totalStations) + 1;
+                }
+                updateSubwayPosition();
+            }
+
+            function start() {
+                timerId = setInterval(moveSubway, moveInterval);
+            }
+
+            function stop() {
+                clearInterval(timerId);
+            }
+
+            function findClosestStation(event) {
+                const clickedStation = parseInt(event.target.getAttribute("data-station"));
+                const closestStations = currentPositions.map(position => {
+                    let distance = Math.abs(clickedStation - position);
+                    if (distance > totalStations / 2) {
+                        distance = totalStations - distance;
+                    }
+                    return distance;
+                });
+                const minDistance = Math.min(...closestStations);
+                const closestSubwayIndex = closestStations.indexOf(minDistance);
+                const closestSubwayPosition = currentPositions[closestSubwayIndex];
+                const stationsAway = Math.abs(closestSubwayPosition - clickedStation);
+                alert(`가장 가까운 지하철은 ${closestSubwayIndex + 1}호차이며, ${stationsAway}정거장 전에 있습니다.`);
+            }
+
+            updateSubwayPosition();
+            start();
+
+            const subwayElements = document.getElementsByClassName("subway");
+            for (let i = 0; i < subwayElements.length; i++) {
+                subwayElements[i].addEventListener("click", findClosestStation);
+            }
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <h1>지하철 만들기</h1>
+        <div id="subwayContainer">
+            <div class="subway" data-station="1"></div>
+            <div class="subway" data-station="1"></div>
+            <div class="subway" data-station="1"></div>
+            <div class="subway" data-station="1"></div>
+        </div>
+    </div>
+</body>
+</html>

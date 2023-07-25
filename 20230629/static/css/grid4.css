@@ -1,0 +1,63 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #0f1635;
+    color: #fff;
+}
+#wrap{
+    width: 90%;
+    margin: 20px auto;
+}
+#header{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#article{
+    display: grid;
+    grid-template-columns: repeat(3,minmax(125px,auto));
+    gap: 20px;
+    margin-top: 50px;
+}
+#article section{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 40px 80px 200px;
+    gap: 10px;
+}
+.title{
+    grid-column: 1/4;
+}
+.progress_long{
+    grid-column: 1/3;
+    display: flex;
+    justify-content: space-between;
+    background: #3c456e;
+    border-radius: 8px;
+    padding: 10px;
+}
+.progress_long p{
+    align-self: flex-end;
+}
+.progress_long b{
+    font-size: 30px;
+}
+.progress_short{
+    background: #3c456e;
+    border-radius: 8px;
+}
+.grape{
+    grid-column: 1/4;
+    background: #3c456e;
+    border-radius: 8px;
+}
+.bi-caret-down-fill{
+    color: #b40404;
+}
+.bi-caret-up-fill{
+    color: #04b404;
+}

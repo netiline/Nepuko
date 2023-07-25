@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        #wrap{
+            width: 100%;
+            display: flex;
+            padding: 0;
+            margin: 0 auto;
+        }
+        #sta1, #sta3{
+            display: flex;
+            margin-left: 500px;
+            flex-wrap: wrap;
+        }
+        #sta3{
+            flex-direction: row-reverse;
+            position: absolute;
+            top: 900px;
+        }
+        #sta2 {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        #sta4{
+            display: flex;
+            flex-direction: column-reverse;
+            position: absolute;
+            left: 400px;
+        }
+        .station{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            text-align: center;
+        }
+        .train{
+            width: 70px;
+            height: 30px;
+            font-size: 15px;
+        }
+        #train1{
+            background-color: red;
+            color: #fff;
+        }
+        #train2{
+            background-color: blue;
+            color: #fff;
+        }
+        #train3{
+            background-color: green;
+            color: #fff;
+        }
+        #train4{
+            background-color: yellow;
+            color: #000;
+        }
+    </style>
+    <script>
+    window.onload = function() {
+            var currentStation = 1;
+
+            // 열차들 생성
+            let train1 = createTrain("1호 차량", "train1", "red");
+            let train2 = createTrain("2호 차량", "train2", "blue");
+            let train3 = createTrain("3호 차량", "train3", "green");
+            let train4 = createTrain("4호 차량", "train4", "yellow");
+
+            // 1호 열차 추가
+            document.getElementById("station1").appendChild(train1);
+
+            // 2호 열차 추가
+            setTimeout(function() {
+                document.getElementById("station11").appendChild(train2);
+            }, 1000);
+
+            // 3호 열차 추가
+            setTimeout(function() {
+                document.getElementById("station21").appendChild(train3);
+            }, 1000);
+
+            // 4호 열차 추가
+            setTimeout(function() {
+                document.getElementById("station31").appendChild(train4);
+            }, 1000);
+
+            // 열차 생성 함수
+            function createTrain(text, id, bgColor) {
+                let train = document.createElement("div");
+                train.className = "train";
+                train.id = id;
+                train.textContent = text;
+                train.style.backgroundColor = bgColor;
+                train.style.color = "#fff";
+                return train;
+            }
+
+            // 기존 코드와 동일한 열차 이동 로직
+            setInterval(function() {
+                let nextStation = currentStation + 1;
+                if (nextStation <= 40) {
+                    let currentStationElement = document.getElementById("station" + currentStation);
+                    let nextStationElement = document.getElementById("station" + nextStation);
+                    let train = currentStationElement.querySelector(".train");
+                    currentStationElement.removeChild(train);
+                    nextStationElement.appendChild(train);
+                    currentStation = nextStation;
+                } else {
+                    let currentStationElement = document.getElementById("station" + currentStation);
+                    let nextStationElement = document.getElementById("station1");
+                    let train = currentStationElement.querySelector(".train");
+                    currentStationElement.removeChild(train);
+                    nextStationElement.appendChild(train);
+                    currentStation = 1;
+                }
+            }, 300);
+        }
+    </script>
+</head>
+<body>
+    
+    <div id="wrap">
+        <div id="sta1">
+            <div class="station" id="station1">1</div>
+            <div class="station" id="station2">2</div>
+            <div class="station" id="station3">3</div>
+            <div class="station" id="station4">4</div>
+            <div class="station" id="station5">5</div>
+            <div class="station" id="station6">6</div>
+            <div class="station" id="station7">7</div>
+            <div class="station" id="station8">8</div>
+            <div class="station" id="station9">9</div>
+            <div class="station" id="station10">10</div>
+        </div>
+        <div id="sta2">
+            <div class="station" id="station11">11</div>
+            <div class="station" id="station12">12</div>
+            <div class="station" id="station13">13</div>
+            <div class="station" id="station14">14</div>
+            <div class="station" id="station15">15</div>
+            <div class="station" id="station16">16</div>
+            <div class="station" id="station17">17</div>
+            <div class="station" id="station18">18</div>
+            <div class="station" id="station19">19</div>
+            <div class="station" id="station20">20</div>
+        </div>
+        <div id="sta3">
+            <div class="station" id="station21">21</div>
+            <div class="station" id="station22">22</div>
+            <div class="station" id="station23">23</div>
+            <div class="station" id="station24">24</div>
+            <div class="station" id="station25">25</div>
+            <div class="station" id="station26">26</div>
+            <div class="station" id="station27">27</div>
+            <div class="station" id="station28">28</div>
+            <div class="station" id="station29">29</div>
+            <div class="station" id="station30">30</div>
+        </div>
+        <div id="sta4">
+            <div class="station" id="station31">31</div>
+            <div class="station" id="station32">32</div>
+            <div class="station" id="station33">33</div>
+            <div class="station" id="station34">34</div>
+            <div class="station" id="station35">35</div>
+            <div class="station" id="station36">36</div>
+            <div class="station" id="station37">37</div>
+            <div class="station" id="station38">38</div>
+            <div class="station" id="station39">39</div>
+            <div class="station" id="station40">40</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> 음식 월드컵</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body onload="preLoaingImg()">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="wrap">
+      <header>
+        <h1>음식 월드컵</h1>
+        <p id="roundTitle">냐미~ .</p>
+      </header>
+      <div class="content default" id="content">
+        <button id="btnGameStart" onclick="start()">게임 참여</button>
+      </div>
+      <footer class="footer soff" id="footer">
+        <button id="cancel" onclick="lezhin.Event.clickCancel()">취소</button>
+        <button id="prev" onclick="lezhin.Event.clickPrev()">이전</button>
+      </footer>
+    </div>
+    <script src="assets/js/script3.js" async defer></script>
+    <script>
+      function start() {
+        lezhin.start();
+      }
+      function preLoaingImg() {
+        const preLoadingList = [
+          'images/a1.jpg', 'images/a2.jpg', 'images/a3.jpg', 'images/a4.jpg', 'images/a5.jpg', 'images/a6.jpg', 'images/a7.jpg', 'images/a8.jpg', 'images/a9.jpg', 'images/a10.jpg', 'images/a11.jpg', 'images/a12.jpg', 'images/a13.jpg', 'images/a14.jpg', 'images/a15.jpg', 'images/a16.jpg'
+        ], length = preLoadingList.length, tObj = document.getElementsByTagName("BODY")[0];
+        let i = 0, imgNode;
+        const hiddenNode = document.createElement('DIV');
+        hiddenNode.className = 'pre_load soff';
+        for(i; i < length; i++) {
+          imgNode = document.createElement('IMG');
+          imgNode.setAttribute('src', preLoadingList[i]);
+          hiddenNode.appendChild(imgNode);
+        }
+        tObj.appendChild(hiddenNode);
+      }
+    </script>
+  </body>
+</html>

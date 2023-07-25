@@ -1,0 +1,113 @@
+:root{
+    --bs-green: #0b421a;
+    --bs-white: #fffcfc;
+    --bs-beige: #eac784;
+    --bs-brown: #362415;
+    --bs-gray: #604c4c;
+}
+#section{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.detail{
+    width: 1120px;
+    height: 500px;
+    margin: 0 auto;
+    display: flex;
+    margin-bottom: 25px;
+}
+.photo{
+    width: 540px;
+    height: 400px;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #000;
+    margin-bottom: 83px;
+}
+.detail_img{
+    width: 400px;
+    height: 500px;
+    margin-left: 20px;
+    margin-right: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background: #23322b;
+    border-radius: 30px;
+}
+.detail_img img{
+    width: 100%;
+}
+.detail_text{
+    width: 700px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+}
+.section1{
+    width: 250px;
+    height:200px;
+    margin-right: 18px;
+}
+.section1 div:nth-child(1){
+    font-size: 24px;
+    color: var(--bs-brown);
+    height:90px;
+}
+.section1 div:nth-child(3){
+    font-size:20px;
+    color:var(--bs-green);
+}
+.section1 div{
+    width: 337px;
+    height: 50px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section2{
+    width: 380px;
+    height: 200px;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+}
+.menu_info{
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    text-underline-offset: 10px;
+    border-bottom: 2px solid var(--bs-gray);
+}
+.menu_detail{
+    display: flex;
+    margin: 10px;
+    justify-content: space-between;
+}
+.menu_detail_left{
+    border-right: 1px solid var(--bs-gray);
+}
+.menu_detail_left> div, .menu_detail_right>div{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    margin-right: 25px;
+}
+.section3{
+    width: 667px;
+    height: 100px;
+    margin-right: 18px;
+    align-self:flex-start;
+    padding-left: 120px;
+    margin-top: 30px;
+}

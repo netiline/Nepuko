@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+        function calc(){
+            let height = document.getElementById("height").value;
+            let weight = document.getElementById("weight").value;
+            let rel = document.getElementById("result");
+            let bmi = weight/((height/100)*(height/100)) ;
+            if(bmi >= 25){
+                rel.innerHTML = "BMI는 "+bmi.toFixed(2)+"<br>너 비만";
+            }else if( bmi >= 23){
+                rel.innerHTML = "BMI는 "+bmi.toFixed(2)+"<br>너 과체중";
+            }else if(bmi >=18.5){
+                rel.innerHTML ="BMI는 "+bmi.toFixed(2)+"<br>너 정상";
+            }else{
+                rel.innerHTML = "BMI는 "+bmi.toFixed(2)+"<br>너 저체중"
+            }
+        }
+        function calc1(){
+            let blood = document.getElementById("blood").value;
+            let blood2 = document.getElementById("blood2").value;
+            let rel2 = document.getElementById("result1");
+            if(blood <= 100 && blood >= 70){
+                if(blood2 <=140 && blood >= 90){
+                    rel2.innerHTML = "공복혈당은 "+blood+"<br>식후 2시간 혈당은 "+blood2+"<br>정상혈당 수치"
+                }
+        }
+    }
+	</script>
+</head>
+<body>
+    <h1> 혈당 측정기 </h1>
+    <input type="text" id="blood" placeholder="공복혈당">
+    <input type="text" id="blood2" placeholder="식후 2 혈당">
+    <button onclick="calc1()">계산하기</button>
+    <div id="result1"></div>
+
+	<h1> 비만도 측정기 </h1>
+	<input type="text" id="height" placeholder="키">
+	<input type="text" id="weight" placeholder="몸무게">
+	<button onclick="calc()">계산하기</button>
+    <div id="result"></div>
+</body>
+</html>

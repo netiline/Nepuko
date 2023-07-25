@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENU</title>
+    <link rel="stylesheet" href="./static/css/menu.css">
+    <link rel="stylesheet" href="./static/css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div id="logo">
+                <a href="./main.html">
+                    <img src="./static/images/cafe_logo_final.png" alt="로고이미지1">
+                </a>
+            </div>
+            <div id="main_menu">
+                <div class="sitename">MENU</div>
+                <div class="main_menu_list">
+                    <div class="coffee">
+                        <ul>Roast Memory
+                            <li class="snb_menu"><a href="./main.html">Roast Memory</a></li>
+                            <li class="snb_menu"><a href="./greetings.html">인사말</a></li>
+                        </ul>
+                    </div>
+                    <div class="coffeemenu">
+                        <ul>메뉴
+                            <li class="snb_menu"><a href="./menu.html">커피</a></li>
+                            <li class="snb_menu"><a href="./menu.html">음료</a></li>
+                            <li class="snb_menu"><a href="./menu.html">디저트</a></li>
+                            <li class="snb_menu"><a href="./menu.html">MD</a></li>
+                        </ul>
+                    </div>
+                    <div class="infomation">
+                        <ul>공지사항
+                            <li class="snb_menu"><a href="./announce.html">공지사항</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section id="section">
+            <div id="menubar">
+                <button class="menu_select" onclick="main()">All</button>
+                <button class="menu_select" onclick="main()">커피</button>
+                <button class="menu_select" onclick="main()">음료</button>
+                <button class="menu_select" onclick="main()">디저트</button>
+                <button class="menu_select" onclick="main()">MD</button>
+            </div>
+            <div id="menulist">
+                <div class="menubox">
+                    <div class="menuimgbox">
+                        <a href="./detail.html">
+                            <img class="menu_image" src="./static/images/americano.png" alt="커피 이미지1">
+                        </a>
+                    </div>
+                    <div class="menutextbox">
+                        <a href="./detail.html">아메리카노<br>Americano</a>
+                    </div>
+                </div>
+                <div class="menubox">
+                    <div class="menuimgbox">
+                        <a href="./detail.html">
+                            <img class="menu_image" src="./static/images/americano.png" alt="커피 이미지2">
+                        </a>
+                    </div>
+                    <div class="menutextbox">
+                        <a href="./detail.html">헤이즐넛 아메리카노<br>Hazelnut Americano</a>
+                    </div>
+                </div>
+                <div class="menubox">
+                    <div class="menuimgbox">
+                        <a href="./detail.html">
+                            <img class="menu_image" src="./static/images/latte.png" alt="커피 이미지3">
+                        </a>
+                    </div>
+                    <div class="menutextbox">
+                        <a href="./detail.html">카페 라떼<br>Cafe Latte</a>
+                    </div>
+                </div>
+                <div class="menubox">
+                    <div class="menuimgbox">
+                        <a href="./detail.html">
+                            <img class="menu_image" src="./static/images/latte.png" alt="커피 이미지4">
+                        </a>
+                    </div>
+                    <div class="menutextbox">
+                        <a href="./detail.html">헤이즐넛 카페 라떼<br>Hazelnut Cafe Latte</a>
+                    </div>
+                </div>
+                <div class="menubox">
+                    <div class="menuimgbox">
+                        <a href="./detail.html">
+                            <img class="menu_image" src="./static/images/coldbrue.png" alt="커피 이미지5">
+                        </a>
+                    </div>
+                    <div class="menutextbox">
+                        <a href="./detail.html">콜드 브루<br>Cold Brew</a>
+                    </div>
+                </div>
+                <div class="menubox">
+                    <div class="menuimgbox">
+                        <a href="./detail.html">
+                            <img class="menu_image" src="./static/images/caramel.png" alt="커피 이미지6">
+                        </a>
+                    </div>
+                    <div class="menutextbox">
+                        <a href="./detail.html">아이스 카라멜 마키아또<br>Ice Caramel Macchiato</a>
+                    </div>
+                </div>
+                <div class="menubox">
+                    <div class="menuimgbox">
+                        <a href="./detail.html">
+                            <img class="menu_image" src="./static/images/dolce latte.png" alt="커피 이미지7">
+                        </a>
+                    </div>
+                    <div class="menutextbox">
+                        <a href="./detail.html">돌체 라떼<br>Dolce Latte</a>
+                    </div>
+                </div>
+                <div class="menubox">
+                    <div class="menuimgbox">
+                        <a href="./detail.html">
+                            <img class="menu_image" src="./static/images/vanila latte.png" alt="커피 이미지8">
+                        </a>
+                    </div>
+                    <div class="menutextbox">
+                        <a href="./detail.html">바닐라 라떼<br>Vanilla Latte</a>
+                    </div>
+                </div>
+                <div class="menubox">
+                    <div class="menuimgbox">
+                        <a href="./detail.html">
+                            <img class="menu_image" src="./static/images/javachip.png" alt="음료 이미지1">
+                        </a>
+                    </div>
+                    <div class="menutextbox">
+                        <a href="./detail.html">자바 칩 프라푸치노<br>Java Chip Frappuccino</a>
+                    </div>
+                </div>
+                <div class="menubox">
+                    <div class="menuimgbox">
+                        <a href="./detail.html">
+                            <img class="menu_image" src="./static/images/이거뭐임.png" alt="음료 이미지2">
+                        </a>
+                    </div>
+                    <div class="menutextbox">
+                        <a href="./detail.html">딸기홍차슬러시<br>Strawberry Black Tea Slush</a>
+                    </div>
+                </div>
+                <div class="menubox">
+                    <div class="menuimgbox">
+                        <a href="./detail.html">
+                            <img class="menu_image" src="./static/images/이거뭐임2.png" alt="음료 이미지3">
+                        </a>
+                    </div>
+                    <div class="menutextbox">
+                        <a href="./detail.html">딸기말차라떼<br>Strawberry Matcha Latte</a>
+                    </div>
+                </div>
+                <div class="menubox">
+                    <div class="menuimgbox">
+                        <a href="./detail.html">
+                            <img class="menu_image" src="./static/images/strawberry_prafe.png" alt="음료 이미지4">
+                        </a>
+                    </div>
+                    <div class="menutextbox">
+                        <a href="./detail.html">스트로베리 피치 프라페<br>Strawberry Peach Frappe</a>
+                    </div>
+                </div>
+                <div class="menubox">
+                    <div class="menuimgbox">
+                        <a href="./detail.html">
+                            <img class="menu_image" src="./static/images/blend.png" alt="음료 이미지5">
+                        </a>
+                    </div>
+                    <div class="menutextbox">
+                        <a href="./detail.html">아이스 히비스커스 블렌드 티<br>Iced Hibiscus Blend Brewed Tea</a>
+                    </div>
+                </div>
+                <div class="menubox">
+                    <div class="menuimgbox">
+                        <a href="./detail.html">
+                            <img class="menu_image" src="./static/images/toast.png" alt="디저트 이미지1">
+                        </a>
+                    </div>
+                    <div class="menutextbox">
+                        <a href="./detail.html">베이컨 치즈 토스트<br>Bacon Cheese Toast</a>
+                    </div>
+                </div>
+                <div class="menubox">
+                    <div class="menuimgbox">
+                        <a href="./detail.html">
+                            <img class="menu_image" src="./static/images/red velvet cake.png" alt="디저트 이미지2">
+                        </a>
+                    </div>
+                    <div class="menutextbox">
+                        <a href="./detail.html">레드벨벳 크림치즈 케이크<br>Red Velvet Cream Cheese Cake</a>
+                    </div>
+                </div>
+                <div class="menubox">
+                    <div class="menuimgbox">
+                        <a href="./detail.html">
+                            <img class="menu_image" src="./static/images/macaron.png" alt="디저트 이미지3">
+                        </a>
+                    </div>
+                    <div class="menutextbox">
+                        <a href="./detail.html">바닐라 마카롱<br>Vanilla Macaron</a>
+                    </div>
+                </div>
+                <div class="menubox">
+                    <div class="menuimgbox">
+                        <a href="./detail.html">
+                            <img class="menu_image" src="./static/images/MD1.png" alt="MD 이미지">
+                        </a>
+                    </div>
+                    <div class="menutextbox">
+                        <a href="./detail.html">캠퍼 텀블러 L 흰색<br>Camper Tumbler L White</a>
+                    </div>
+                </div>
+                <div class="menubox">
+                    <div class="menuimgbox">
+                        <a href="./detail.html">
+                            <img class="menu_image" src="./static/images/MD2.png" alt="MD 이미지2">
+                        </a>
+                    </div>
+                    <div class="menutextbox">
+                        <a href="./detail.html">흰색 텀블러<br>White Tumbler</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer id="footer">
+            <div class="footer_logo">
+                <a href="#wrap"><img src="./static/images/cafe_logo_final.png" alt=""></a>
+            </div>
+            <div class="snsicon">
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+                <a href="https://ko-kr.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i></a>
+                <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter"></i></a>
+                <a href="https://www.youtube.com/watch?v=Q3bOla3dG1g" target="_blank" rel="noopener noreferrer"><i class="bi bi-youtube"></i></a>
+            </div>
+            <div class="footer_text">
+                <div>대표자: 김승겸, 박수호, 정예림</div>
+                <div>대표번호: 042)222-3333</div>
+                <div>주소: 대전광역시 중구 중앙로121번길 20</div>
+                <div>Copyright 2023. Roast Memory all rights reserved.</div>
+                <div>좋은 커피는 좋은 원두로 부터 나옵니다.</div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

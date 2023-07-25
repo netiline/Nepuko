@@ -1,0 +1,130 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+body {
+  background-image: linear-gradient(to bottom, #FFD700, #FFA500);
+}
+
+
+#bingo-title {
+  margin-bottom: 30px;
+  font-weight: 900;
+  display: inline-block;
+  padding: 10px 20px;
+  border: 5px solid #000000;
+  color: black;
+  border-radius: 10px;
+  background-color: orange;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+#bingo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px; 
+}
+
+#bingo-board-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#bingo-board {
+  display: grid;
+  grid-template-columns: repeat(5, 80px);
+  grid-template-rows: repeat(5, 80px);
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bingo-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid black;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.bingo-cell:nth-child(3n+1) {
+  background-color: #F8C471;
+}
+
+.bingo-cell:nth-child(3n+2) {
+  background-color: #58D68D;
+}
+
+.bingo-cell:nth-child(3n+3) {
+  background-color: #5DADE2;
+}
+
+
+#start-button {
+  margin-top: 50px;
+  background-color: #0088FF;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#start-button:hover {
+  background-color: brown;
+}
+
+/* side 이미지 스타일 */
+.side-image {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 200px;
+  width: 300px; 
+  height: 300px;
+  margin: 50px; 
+}
+
+.side-image img {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  border-radius: 200px;
+  margin: 0;
+  transition: transform 0.3s ease;
+}
+
+.side-image img:hover {
+  transform: scale(1.1);
+}
+.bingo-cell.called-number {
+  background-color: aqua;
+  color: white;
+}
