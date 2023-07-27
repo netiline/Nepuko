@@ -1,0 +1,11 @@
+.payment_box {
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+#loan_wrap {
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
