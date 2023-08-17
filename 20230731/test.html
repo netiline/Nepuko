@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--
+        주메뉴
+        HTML, CSS, JAVASCRIPT
+        각 주 메뉴의 서브 메뉴
+        HTML -> div, form, input, legent, filedset
+        CSS -> position, background, opacity, transform
+        JAVASCRIPT -> 변수, 함수, 배열, 제어문
+
+        처음 화면에는 주메뉴만 보인다.
+        각 주메뉴를 클릭하면 해당 메뉴의 서브 메뉴가 펼쳐져서 보여야 한다.
+        (배경색 각각 다르게 줘서 만들고 최대한 css 적용해보기)
+    -->
+    <style>
+        fieldset{display: none;}
+        #wrap{
+            margin: 0 auto;
+            display: flex;
+            width: 1000px;
+            justify-content: center;
+            gap: 100px;
+        }
+        #fd1{
+            background-color: aqua;
+        }
+        #fd2{
+            background-color: brown;
+        }
+        #fd3{
+            background-color: yellowgreen;
+        }
+    </style>
+    <div id="wrap">
+        <div id="html">
+            <button id="html_bt">HTML</button>
+            <fieldset id="fd1">
+                <legend>서브 메뉴</legend>
+                <div>div</div>
+                <div>form</div>
+                <div>input</div>
+                <div>legend</div>
+                <div>fieldset</div>
+            </fieldset>
+        </div>
+        <script>
+            $("#html_bt").click(function(){
+                $("#fd1").slideToggle();
+            })
+        </script>
+        <div id="css">
+            <button id="css_bt">CSS</button>
+            <fieldset id="fd2">
+                <legend>서브 메뉴</legend>
+                <div>position</div>
+                <div>background</div>
+                <div>opacity</div>
+                <div>transform</div>
+            </fieldset>
+        </div>
+        <script>
+            $("#css_bt").click(function(){
+                $("#fd2").slideToggle();
+            });
+        </script>
+        <div id="js">
+            <button id="js_bt">JAVASCRIPT</button>
+            <fieldset id="fd3">
+                <legend>서브 메뉴</legend>
+                <div>변수</div>
+                <div>함수</div>
+                <div>배열</div>
+                <div>제어문</div>
+            </fieldset>
+        </div>
+        <script>
+            $("#js_bt").click(function(){
+                $("#fd3").slideToggle();
+            });
+        </script>
+    </div>
+
+</body>
+</html>

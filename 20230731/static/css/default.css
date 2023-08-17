@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul, ol{list-style-type: none;}
+#wrap{
+    width: 600px;
+    margin: 0 auto;
+}
+#header{
+    display: flex;
+    background-color: yellow;
+    justify-content: space-between;
+}
+#menu_icon{
+    font-size: 40px;
+    margin-left: 20px;
+}
+#logo_wrap{
+    margin-right: 20px;
+    padding: 5px 0;
+}
+#menu_list{
+    z-index: 100;
+    position: absolute;
+    top: 62.5px;
+    background: yellow;
+    display: none;
+
+}

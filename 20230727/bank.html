@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: "궁서";
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            background-color: #003366;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+
+        form {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            max-width: 400px;
+            margin: 20px auto;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            padding: 10px;
+            width: 80%;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #003366;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        button:hover {
+            background-color: #00224d;
+        }
+
+        h2 {
+            background-color: #003366;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin: 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            max-width: 500px;
+            margin: 20px auto;
+        }
+
+        li {
+            background-color: #f9f9f9;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 3px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <!--
+        bank 객체 - 속성(bank_name, money, account_num)
+        
+        입력하여 bank객체로 저장하기
+        저장된 bank 객체들 출력하기
+    -->
+    <h1>Bank 객체 관리</h1>
+    <form id="bankForm">
+        <label for="bank_name">은행명:</label>
+        <input type="text" id="bank_name" placeholder="은행명을 입력해주세요."><br>
+
+        <label for="money">잔액:</label>
+        <input type="number" id="money" placeholder="잔액을 입력해주세요."><br>
+
+        <label for="account_num">계좌번호:</label>
+        <input type="text" id="account_num" placeholder="(-)을 뺀 10자리를 입력해주세요."><br>
+
+        <button type="button" onclick="saveBank()">저장하기</button>
+    </form>
+
+    <h2>저장된 Bank 객체들</h2>
+    <ul id="bankList">
+        <!-- 여기에 저장된 bank 객체들이 나열될 것입니다. -->
+    </ul>
+
+    <script>
+        // Bank 객체를 저장할 배열
+        let banks = [];
+
+        function saveBank() {
+            // 폼 입력값 가져오기
+            const bank_name = document.getElementById("bank_name").value;
+            const moneyInput = parseFloat(document.getElementById("money").value);
+            const money = "₩"+moneyInput.toLocaleString(); // 1000단위 쉼표와 원 표시 추가
+            const account_num_get = document.getElementById("account_num");
+            const account_num_input = account_num_get.value;
+            const account_num = formatAccountNumber(account_num_input); // 계좌번호 형식 변경
+
+            if (account_num_input.length > 10) {
+                alert("계좌번호는 10자리 이하여야 합니다.");
+                account_num_get.focus();
+                return;
+            }
+
+            // Bank 객체 생성
+            const bank = {
+                bank_name: bank_name,
+                money: money,
+                account_num: account_num
+            };
+
+            // Bank 객체 배열에 추가
+            banks.push(bank);
+
+            // 저장된 Bank 객체들을 출력하는 함수 호출
+            displayBanks();
+
+            // 폼 비우기
+            document.getElementById("bankForm").reset();
+        }
+
+        function formatAccountNumber(account_num) {
+            // 입력 받은 계좌번호를 "xxx-xx-xxxxx" 형식으로 변경
+            const regex = /^(\d{3})(\d{2})(\d{5})$/;
+            const formattedAccountNum = account_num.replace(regex, "$1-$2-$3");
+            return formattedAccountNum;
+        }
+
+        function displayBanks() {
+            // 저장된 Bank 객체들을 출력하기 위한 HTML 생성
+            let html = "";
+            banks.forEach(function(bank) {
+                html += "<li>" + bank.bank_name + " - 잔액: " + bank.money + ". 계좌번호: " + bank.account_num + "</li>";
+            });
+
+            // 출력할 위치에 HTML 삽입
+            document.getElementById("bankList").innerHTML = html;
+        }
+    </script>
+</body>
+</html>
